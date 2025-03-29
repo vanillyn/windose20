@@ -1,0 +1,24 @@
+plymouth.set_background_color(0, 0, 0)
+plymouth.set_font("/usr/share/plymouth/themes/yamero/assets/font.pf2")
+
+
+plymouth.image_sprite_new(10, 10, "bios-logo.png")
+
+
+function type_text(x, y, text, delay)
+    for i = 1, #text do
+        plymouth.display_text(x, y, text:sub(1, i))
+        plymouth.sleep(delay)
+    end
+end
+
+type_text(10, 50, "Needy Girl Overdose", 0.05)
+type_text(10, 70, "Copyright (C) 2020-", 0.05)
+type_text(10, 110, "NGO BIOS Rev1.0", 0.05)
+type_text(10, 150, "Main Processor : raincandy", 0.05)
+type_text(10, 170, "Memory Testing : OK", 0.05)
+
+for i = 1, 20 do
+    plymouth.display_text(10, 200, "Booting Windose20" .. string.rep(".", i))
+    plymouth.sleep(0.1)
+end

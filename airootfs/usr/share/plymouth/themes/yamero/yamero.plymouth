@@ -1,3 +1,9 @@
 [Plymouth Theme]
 Name=yamero
 Description=boot-up screen for windose 20
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/yamero/assets
+ScriptFile=/usr/share/plymouth/themes/yamero/yamero.script
+ConsoleLogBackgroundColor=0x00000000
